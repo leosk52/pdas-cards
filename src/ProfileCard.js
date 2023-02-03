@@ -1,11 +1,23 @@
-const ProfileCard = ({img, title, handle, description}) => {
+const ProfileCard = ({ img, title, handle, description }) => {
   return (
-      <div>
-        <img src={img} alt={title}/>
-        <h3>{title}</h3>
-        <h3>{handle}</h3>
-        <div>{description}</div>
+    <div className="card">
+      <div className="card-image">
+        <figure className="images is-1by1">
+          <img src={img} alt={title} />
+        </figure>
       </div>
+
+      <div className="card-content">
+        <div className="media-content">
+          <p className="title is-4">{title}</p>
+          <p className="subtitle is-6">{handle}</p>
+        </div>
+
+        <div className="content">
+          {description}
+        </div>
+      </div>
+    </div>
   );
 };
 
